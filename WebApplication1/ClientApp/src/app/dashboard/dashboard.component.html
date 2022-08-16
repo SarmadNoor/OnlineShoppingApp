@@ -1,0 +1,18 @@
+<app-nav-menu></app-nav-menu>
+<strong>Welcome and have at look at our products</strong>
+<br />
+<br />
+<br />
+<div *ngFor="let product of productsList; let i = index">
+  <div class="card" style="width: 18rem;" >
+    <img class="card-img-top" [src]="product.imageUrl" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">${{product.unitPrice}}</p>
+      <a (click)="addtocart(product.productId, product.userId)" class="btn btn-primary">Add to cart </a>
+    </div>
+  </div>
+  <br />
+</div>
+
+

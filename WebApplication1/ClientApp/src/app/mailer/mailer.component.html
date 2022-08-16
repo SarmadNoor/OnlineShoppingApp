@@ -1,0 +1,24 @@
+<app-nav-menu></app-nav-menu>
+<form [formGroup]="MailerForm" (ngSubmit)="onSubmit()" class="headercolor">
+  <div class="container">
+    <div>
+      <label for="email"><b>Email Id </b></label>
+      <br />
+      <input id="email" type="text" formControlName="emailId" placeholder="Enter Email" required>
+    </div>
+    <div>
+      <label for="Subject"><b>Subject: </b></label>
+      <br />
+      <input id="subject" type="text" formControlName="subject" placeholder="Enter Subject" required>
+    </div>
+    <div>
+      <label for="emailbody"><b>Message: </b></label>
+      <br />
+      <textarea id="emailbody" class="textareaclass" formControlName="emailbody" placeholder="Enter Email Body" required>
+      </textarea>
+    </div>
+    <div>
+      <button type="submit" (click)="confirmOrder()">Send</button>
+    </div>
+  </div>
+</form>

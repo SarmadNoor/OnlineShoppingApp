@@ -1,0 +1,16 @@
+<app-nav-menu></app-nav-menu>
+<strong>Let's see what you have in your cart</strong>
+<br />
+<br />
+<div *ngFor="let product of productsInCart; let i = index">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="product.imageUrl" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">Price: ${{product.unitPrice}}</p>
+      <p class="card-text">Quantity: {{product.quantity}}</p>
+      <button (click)="confirmOrder()" class="btn btn-primary">Confirm Order </button>
+    </div>
+  </div>
+  <br />
+</div>

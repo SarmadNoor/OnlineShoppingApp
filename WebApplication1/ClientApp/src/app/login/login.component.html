@@ -1,0 +1,16 @@
+<app-nav-menu></app-nav-menu>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="headercolor">
+  <div class="container">
+    <div >
+      <label for="username"><b>User Id </b></label>
+      <input id="username" type="text" formControlName="username" placeholder="Enter Username" required>
+    </div>
+    <div>
+      <label for="password"><b>Password: </b></label>
+      <input id="password" type="password" formControlName="password" placeholder="Enter Password" required>
+    </div>
+    <div>
+      <button type="submit">Login</button>
+    </div>
+  </div>
+</form>

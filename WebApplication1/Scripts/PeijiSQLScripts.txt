@@ -1,0 +1,26 @@
+select * from Users
+
+Insert into Users (UserID,[Password],isAdmin,CreatedDate)
+values
+(
+'sarmad11july','1234','true',GETDATE()
+)
+
+
+Create Table Products(
+ProductId Int Identity(1,1) Primary Key,
+[Name] Varchar(100) Not Null,
+UnitPrice Decimal Not Null,
+Description varchar(200)
+)
+
+
+Insert into Products ([Name],UnitPrice,Description)
+values
+(
+'Watch',100,'Rolex Watch',
+'Phone', 500, 'Iphone 11'
+)
+
+alter table products
+add userid int, imageurl varchar(200), foreign key(userid) references users(id)
